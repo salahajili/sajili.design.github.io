@@ -926,34 +926,35 @@ footer a:hover {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Style the image to be responsive and cover the screen on mobile devices */
+ /* Modal Content - Image */
 .modal-content {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 90%; /* You might want to contain the width to ensure some space around the image */
+    height: auto;
     margin: auto;
+    display: block; /* Ensure it's block to center it with margin */
   }
   
-  /* Adjust modal-content for mobile devices */
+  /* Ensure the image fits the screen on mobile devices */
   @media only screen and (max-width: 768px) { /* Adjust the max-width as needed for your design */
     .modal-content {
-      width: 100%;
-      height: calc(100vh - 60px); /* Make the image full height taking the nav bar height into account */
-      object-fit: cover; /* Cover the entire viewport without losing aspect ratio */
+      width: 100%; /* Full width of the modal */
+      max-height: 80vh; /* Limit the height to the viewport height */
+      object-fit: contain; /* Will ensure the image is fully visible */
     }
-    /* Adjust the prev and next button size and positioning on mobile */
+    
     .prev, .next {
-      font-size: 14px; /* Smaller font size for mobile */
-      padding: 10px; /* Smaller padding for mobile */
-      top: 10%; /* Position from the top */
+      top: 50%; /* Center vertically */
     }
-  }
-  
-  /* Make sure the close button is also visible and accessible on mobile */
-  @media only screen and (max-width: 768px) {
+    
     .close {
-      top: 5px; /* Position the close button near the top of the viewport */
-      right: 15px; /* Position the close button from the right */
-      font-size: 30px; /* Adjust the size as needed for mobile devices */
+      top: 5px; /* Ensure it's at the top */
+      right: 15px; /* Right side and a bit inside */
+      font-size: 30px; /* Visible but not too large */
+    }
+  
+    /* Adjust the modal itself to have a bit of padding around */
+    .modal {
+      padding-top: 10vh; /* Adjust as needed to give some space at the top */
     }
   }
   
