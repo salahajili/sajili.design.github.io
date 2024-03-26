@@ -63,10 +63,26 @@
       <div class="container">
         <h1>Hi.. I Am Salah...!</h1>
         <h5>Passionate Graphic Designer / Photographer</h5>
+        <section >
+
+          <div id="slideshow" class="slideshow-container">
+            <div class="slide">
+              <img src="images/art.jpeg" style="width:100%">
+            </div>
+            <div class="slide">
+              <img src="images/a.jpeg" style="width:100%">
+            </div>            
+            <div class="slide">
+              <img src="images/ar4.jpeg" style="width:100%">
+            </div>
+            <!-- Add more slides as needed -->
+          </div>
+        </section>
       </div>
     </div>
   </header>
 
+  
   <!-- Corner Borders -->
   <section class="borders">
     <div class="brTR">
@@ -516,7 +532,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-</script>
+
+
+var slideIndex = 0;
+var slides = document.getElementsByClassName("slide");
+showSlides();
+
+function showSlides() {
+  // Remove 'active' class from all slides
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  // Increment the index
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1; // Loop back to the first image
+  }
+  // Add 'active' class to the current slide
+  slides[slideIndex - 1].classList.add("active");
+  // Change image every 4 seconds (4000ms) or match with the CSS transition time
+  setTimeout(showSlides, 4000);
+}
+
 
 
   </script>

@@ -987,3 +987,47 @@ footer a:hover {
     }
   }
   
+  /* Slideshow container */
+
+  /* Hide the images by default */
+  .slide {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the slides fill the container */
+    height: 100%; /* Make the slides fill the container */
+    background-size: cover; /* Cover the entire area of the container */
+    background-position: center; /* Center the background image */
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out; /* This ensures the animation has a smooth start and end */
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+  }
+  
+  /* Show the first image */
+  .slide:first-child {
+    display: block;
+  }
+  .slideshow-container {
+    position: relative;
+    max-width: 100vw; /* 100% of the viewport width */
+    height: 90vh; /* 90% of the viewport height */
+    margin: auto; /* Center the container */
+    overflow: hidden; /* Hide the overflow */
+  }
+  .slide.active {
+    opacity: 1;
+    position: relative;
+  }
