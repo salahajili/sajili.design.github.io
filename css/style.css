@@ -926,3 +926,34 @@ footer a:hover {
     background-color: rgba(0,0,0,0.8);
   }
   
+  /* Style the image to be responsive and cover the screen on mobile devices */
+.modal-content {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto;
+  }
+  
+  /* Adjust modal-content for mobile devices */
+  @media only screen and (max-width: 768px) { /* Adjust the max-width as needed for your design */
+    .modal-content {
+      width: 100%;
+      height: calc(100vh - 60px); /* Make the image full height taking the nav bar height into account */
+      object-fit: cover; /* Cover the entire viewport without losing aspect ratio */
+    }
+    /* Adjust the prev and next button size and positioning on mobile */
+    .prev, .next {
+      font-size: 14px; /* Smaller font size for mobile */
+      padding: 10px; /* Smaller padding for mobile */
+      top: 10%; /* Position from the top */
+    }
+  }
+  
+  /* Make sure the close button is also visible and accessible on mobile */
+  @media only screen and (max-width: 768px) {
+    .close {
+      top: 5px; /* Position the close button near the top of the viewport */
+      right: 15px; /* Position the close button from the right */
+      font-size: 30px; /* Adjust the size as needed for mobile devices */
+    }
+  }
+  
