@@ -782,7 +782,7 @@ footer a:hover {
         width: 100%;
     }
     .home-gallery .thumb-a {
-        max-height: 240px;
+        max-height: 400px;
     }
     .controls button {
         padding: 4px 12px;
@@ -913,17 +913,31 @@ footer a:hover {
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1052;
+    color: #fff;
   }
   
   /* Position the "previous button" to the left */
   .prev {
     left: 0;
     border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    z-index: 1052;
+    color: #fff;
   }
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+    color: #ddd; /* Example color change */
   }
   
  /* Modal Content - Image */
@@ -955,6 +969,21 @@ footer a:hover {
     /* Adjust the modal itself to have a bit of padding around */
     .modal {
       padding-top: 10vh; /* Adjust as needed to give some space at the top */
+    }
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .image-container {
+      height: auto; /* Adjust height as needed */
+      width: 100%; /* Maintain full width */
+      overflow: hidden; /* Hide the overflow if you want to crop */
+    }
+  
+    .image-container img {
+      height: auto; /* Allow height to adjust to maintain aspect ratio */
+      width: 100%; /* Make image fill the container width */
+      object-fit: cover; /* This will cover the area of the container, potentially cropping the image */
     }
   }
   
